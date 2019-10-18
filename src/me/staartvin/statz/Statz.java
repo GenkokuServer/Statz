@@ -14,7 +14,6 @@ import me.staartvin.statz.datamanager.player.PlayerStat;
 import me.staartvin.statz.gui.GUIManager;
 import me.staartvin.statz.hooks.DependencyManager;
 import me.staartvin.statz.hooks.StatzDependency;
-import me.staartvin.statz.importer.ImportManager;
 import me.staartvin.statz.language.LanguageHandler;
 import me.staartvin.statz.language.StatisticDescriptionConfig;
 import me.staartvin.statz.listeners.*;
@@ -52,7 +51,6 @@ public class Statz extends JavaPlugin {
     private CommandsManager commandsManager;
     private LogManager logsManager;
     private LanguageHandler langHandler;
-    private ImportManager importManager;
     private DisableManager disableManager;
     private PatchManager patchManager;
     private GUIManager guiManager;
@@ -130,7 +128,6 @@ public class Statz extends JavaPlugin {
         // Load disabled-stats.yml
         this.getDisableManager().createNewFile();
 
-        this.setImportManager(new ImportManager(this));
 
         this.getLogger().info(this.getDescription().getFullName() + " has been enabled!");
 
@@ -535,14 +532,6 @@ public class Statz extends JavaPlugin {
 
     public void setLangHandler(LanguageHandler langHandler) {
         this.langHandler = langHandler;
-    }
-
-    public ImportManager getImportManager() {
-        return importManager;
-    }
-
-    public void setImportManager(ImportManager importManager) {
-        this.importManager = importManager;
     }
 
     public DisableManager getDisableManager() {

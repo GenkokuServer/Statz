@@ -1,5 +1,5 @@
-/bin/
-/target/
-/.idea/
-/lib/
+/bin
+/target
+/.idea
+/lib
 *.iml

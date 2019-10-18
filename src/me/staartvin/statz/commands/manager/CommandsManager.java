@@ -42,7 +42,6 @@ public class CommandsManager implements TabExecutor {
 		//registeredCommands.put(Arrays.asList("info", "i"), new InfoCommand(plugin));
 		registeredCommands.put(Arrays.asList("hooks"), new HooksCommand(plugin));
 		registeredCommands.put(Arrays.asList("transfer"), new TransferCommand(plugin));
-		registeredCommands.put(Arrays.asList("migrate"), new MigrateCommand(plugin));
 		registeredCommands.put(Arrays.asList("purge"), new PurgeCommand(plugin));
 	}
 
